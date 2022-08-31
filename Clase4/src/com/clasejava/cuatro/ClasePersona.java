@@ -5,6 +5,7 @@ import java.util.Objects;
 public class ClasePersona {
 
     private String nombre;
+    private String apellido;
 
     public ClasePersona(String nombre, String apellido) {
         this.nombre = nombre;
@@ -32,13 +33,10 @@ public class ClasePersona {
         return nombre + ' ' + apellido;
     }
 
-    private String apellido;
-
     public boolean equals(Object object) {
         if (this == object) return true;
-        if (!(object instanceof ClasePersona)) return false;
+        if (!(object instanceof ClasePersona persona)) return false;
         if (!super.equals(object)) return false;
-        ClasePersona persona = (ClasePersona) object;
         return java.util.Objects.equals(nombre, persona.nombre) && java.util.Objects.equals(apellido, persona.apellido);
     }
 
