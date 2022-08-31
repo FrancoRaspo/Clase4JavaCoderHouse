@@ -14,7 +14,7 @@ public class ListarPersonaRaspoFranco {
         ClasePersona persona4 = new ClasePersona("Matías", "Maini");
         ClasePersona persona5 = new ClasePersona("Nicolás", "Fabucci");
 
-        //agremos una lista y agreamos lo 5 objetos persona
+        //declaramos una lista y agregamos los 5 objetos persona
 
         ArrayList<ClasePersona> listaPersona = new ArrayList<ClasePersona>();
         listaPersona.add(persona1);
@@ -44,7 +44,7 @@ public class ListarPersonaRaspoFranco {
         System.out.println("\nLista ordenada por apellido ascendente:");
         listaPersona.forEach(System.out::println);
 
-        //ordenarlo por apellido
+        //ordenarlo por apellido descendente
         listaPersona.sort(new Comparator<>() {
             @Override
             public int compare(ClasePersona o1, ClasePersona o2) {
