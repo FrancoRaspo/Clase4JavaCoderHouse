@@ -33,6 +33,7 @@ public class ClasePersona {
         return nombre + ' ' + apellido;
     }
 
+    @Override
     public boolean equals(Object object) {
         if (this == object) return true;
         if (!(object instanceof ClasePersona persona)) return false;
@@ -40,6 +41,7 @@ public class ClasePersona {
         return java.util.Objects.equals(nombre, persona.nombre) && java.util.Objects.equals(apellido, persona.apellido);
     }
 
+    @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), nombre, apellido);
     }
